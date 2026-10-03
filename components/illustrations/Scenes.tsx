@@ -1,5 +1,4 @@
 import { site } from "@/config/site";
-import { Person } from "./Person";
 import { Gear, Plant, Swoosh, Toolbox, WashingMachine, Wrench } from "./Props";
 
 const hand = { fontFamily: "var(--font-hand-face), cursive" } as const;
@@ -117,6 +116,11 @@ export function BrandsScene() {
   return (
     <svg viewBox="0 0 560 500" role="img" aria-labelledby="brands-art-title" className="h-auto w-full overflow-visible">
       <title id="brands-art-title">Technician with a clipboard beside a washing machine and repair toolbox</title>
+      <defs>
+        <filter id="brands-soft" x="-30%" y="-100%" width="160%" height="300%">
+          <feGaussianBlur stdDeviation="6" />
+        </filter>
+      </defs>
       <path
         d="M70 160 Q110 50 270 60 Q450 70 500 200 Q540 330 420 420 Q290 500 150 440 Q20 380 40 260 Q48 205 70 160 Z"
         fill="#dbeafe"
@@ -133,12 +137,12 @@ export function BrandsScene() {
         </g>
       </g>
       <RisingBubbles x={370} y={170} count={6} spread={120} />
-      <g transform="translate(40 60) scale(0.98)">
-        <g className="anim-bob" style={{ animationDelay: "-1.5s" }}>
-          <Person id="brands-tech" pose="clipboard" hair="helmet" />
-        </g>
+      {/* 3D technician render (public/illustrations/technician-checklist.webp, 382×1000) */}
+      <ellipse cx="150" cy="466" rx="80" ry="11" fill="#0b2a5b" opacity="0.16" filter="url(#brands-soft)" />
+      <g className="anim-bob" style={{ animationDelay: "-1.5s" }}>
+        <image href="/illustrations/technician-checklist.webp" x="70" y="58" width="160" height="410" preserveAspectRatio="xMidYMax meet" />
       </g>
-      <Toolbox transform="translate(160 372) scale(0.9)" label={site.shortName} />
+      <Toolbox transform="translate(200 378) scale(0.86)" label={site.shortName} />
       <HandNote x={300} y={44} lines={["Every brand", "Every model"]} rotate={-6} size={24} />
       <Sparkle x={520} y={300} s={0.8} delay={0.5} />
       <Sparkle x={40} y={400} s={0.6} delay={1.2} color="#60a5fa" />
@@ -147,45 +151,36 @@ export function BrandsScene() {
 }
 
 const hearts: [number, number, number][] = [
-  [470, 70, 0],
-  [520, 120, 0.7],
-  [440, 130, 1.4],
+  [548, 50, 0],
+  [584, 96, 0.7],
+  [516, 26, 1.4],
 ];
 
 export function TeamScene() {
   return (
     <svg viewBox="0 0 600 500" role="img" aria-labelledby="team-art-title" className="h-auto w-full overflow-visible">
       <title id="team-art-title">Our technician with two happy customers after a successful repair</title>
+      <defs>
+        <filter id="team-soft" x="-20%" y="-100%" width="140%" height="300%">
+          <feGaussianBlur stdDeviation="7" />
+        </filter>
+      </defs>
       <path
         d="M90 150 Q140 50 300 56 Q480 64 530 200 Q570 330 450 420 Q320 500 170 450 Q30 400 50 270 Q60 200 90 150 Z"
         fill="#ffe6d3"
       />
-      <g transform="translate(10 90) scale(0.92)">
-        <g className="anim-bob" style={{ animationDelay: "-1s" }}>
-          <Person id="team-man" pose="thumbs" hair="short" vest={false} top="#f8fafc" pants="#334155" shoes="#1f2937" skin="#e8a77f" />
-        </g>
+      {/* 3D team: three separate cutouts (public/illustrations/team-*.webp), each bobbing on its own rhythm */}
+      <ellipse cx="300" cy="474" rx="230" ry="14" fill="#0b2a5b" opacity="0.14" filter="url(#team-soft)" />
+      <g className="anim-bob" style={{ animationDelay: "-1.2s", animationDuration: "4.2s" }}>
+        <image href="/illustrations/team-tech.webp" x="193.4" y="40.8" width="176.2" height="433.7" preserveAspectRatio="xMidYMax meet" />
       </g>
-      <g transform="translate(360 104) scale(0.88)">
-        <g className="anim-bob" style={{ animationDelay: "-2.6s" }}>
-          <Person
-            id="team-woman"
-            pose="clipboard"
-            hair="long"
-            hairColor="#2a1a12"
-            vest={false}
-            top="#f3d9c4"
-            pants="#e7e2d9"
-            shoes="#c2410c"
-            skin="#f2b48c"
-          />
-        </g>
+      <g className="anim-bob" style={{ animationDelay: "-2.8s", animationDuration: "3.6s" }}>
+        <image href="/illustrations/team-man.webp" x="52.4" y="69.2" width="153.3" height="403.7" preserveAspectRatio="xMidYMax meet" />
       </g>
-      <g transform="translate(180 60)">
-        <g className="anim-bob">
-          <Person id="team-tech" pose="relaxed" beard />
-        </g>
+      <g className="anim-bob" style={{ animationDelay: "-0.4s", animationDuration: "4.8s" }}>
+        <image href="/illustrations/team-woman.webp" x="376.3" y="80.3" width="169.9" height="391.4" preserveAspectRatio="xMidYMax meet" />
       </g>
-      <HandNote x={30} y={56} lines={["People", "Machines", "Smiles"]} rotate={-14} size={24} />
+      <HandNote x={0} y={34} lines={["People", "Machines", "Smiles"]} rotate={-14} size={24} />
       {hearts.map(([x, y, d]) => (
         <g key={x} transform={`translate(${x} ${y})`}>
           <path

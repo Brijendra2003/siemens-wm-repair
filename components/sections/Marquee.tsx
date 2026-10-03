@@ -1,4 +1,3 @@
-import { brands } from "@/data/content";
 
 const services = [
   "Front load repair",
@@ -11,6 +10,16 @@ const services = [
   "Door lock",
   "Installation",
   "Deep-clean service",
+];
+
+const brandRibbon = [
+  "Siemens front load",
+  "Bosch front load",
+  "Siemens top load",
+  "Bosch top load",
+  "Siemens washer-dryer",
+  "Bosch washer-dryer",
+  "Siemens & Bosch specialists",
 ];
 
 function Star() {
@@ -51,7 +60,7 @@ export function Marquee() {
         <Row items={services} dark />
       </div>
       <div className="mt-1 rotate-[1deg] border-y-2 border-accent-200 bg-accent-50 py-3 sm:py-4">
-        <Row items={brands.map((b) => `${b} machines`)} reverse />
+        <Row items={brandRibbon} reverse />
       </div>
     </section>
   );

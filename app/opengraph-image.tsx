@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/config/site";
 
-export const alt = `${site.name}: Washing machine repair in Mumbai, all major brands`;
+export const alt = `${site.name}: Siemens and Bosch washing machine repair in Mumbai`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -67,7 +67,7 @@ export default function Image() {
             Washing Machine
           </div>
           <div style={{ fontSize: 84, fontWeight: 800, color: "#ea580c", lineHeight: 1.02 }}>Repair &amp; Service</div>
-          <div style={{ fontSize: 30, color: "#334155", marginTop: 26 }}>All major brands · Clear quote · Warranty</div>
+          <div style={{ fontSize: 30, color: "#334155", marginTop: 26 }}>Siemens &amp; Bosch specialists · Clear quote · Warranty</div>
           <div style={{ display: "flex", alignItems: "center", marginTop: 40, gap: 16 }}>
             <div
               style={{

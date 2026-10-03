@@ -2,7 +2,7 @@
  * Single source of truth for business details (NAP), contact and claims.
  * Keep this identical to your Google Business Profile.
  *
- * ⚠ Ads compliance: never put a manufacturer name (Siemens, Bosch, LG…) in
+ * ⚠ Ads compliance: never put a manufacturer name (Siemens, Bosch…) in
  * `name`, `shortName`, `legalName` or the domain. See Architecture.md §3.
  */
 
@@ -66,7 +66,7 @@ export const site = {
   sameAs: [] as string[],
 
   disclaimer:
-    "We are an independent repair service. We are not affiliated with, authorized by, or endorsed by Siemens, Samsung, Bosch, LG or any other brand. Brand names are used only to describe the machines we repair.",
+    "We are an independent repair service. We are not affiliated with, authorized by, or endorsed by Siemens, Bosch or any other brand. Brand names are used only to describe the machines we repair.",
 } as const;
 
 export type Site = typeof site;

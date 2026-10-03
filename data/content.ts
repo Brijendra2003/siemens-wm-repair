@@ -31,8 +31,8 @@ export const services: { title: string; text: string; icon: IconName; tag?: stri
     icon: "top",
   },
   {
-    title: "Semi-Automatic Repair",
-    text: "Wash and spin motors, timers, belts and tub-to-tub transfer problems.",
+    title: "Washer-Dryer Repair",
+    text: "Drying faults, heater and sensor issues, and combined wash-dry cycle problems on washer-dryers.",
     icon: "semi",
   },
   {
@@ -62,20 +62,7 @@ export const services: { title: string; text: string; icon: IconName; tag?: stri
   },
 ];
 
-export const brands = [
-  "Siemens",
-  "Bosch",
-  "LG",
-  "Samsung",
-  "IFB",
-  "Whirlpool",
-  "Godrej",
-  "Haier",
-  "Panasonic",
-  "Onida",
-  "Videocon",
-  "Voltas Beko",
-];
+export const brands = ["Siemens", "Bosch"];
 
 export const steps: { title: string; text: string; icon: IconName }[] = [
   { title: "Book a visit", text: "Fill the short form, call or WhatsApp. Pick a time slot that suits you.", icon: "calendar" },
@@ -137,8 +124,8 @@ export const faqs: { q: string; a: string }[] = [
     a: "Yes. Replaced parts come with a warranty. The duration depends on the part and is printed on your invoice. If the same fault returns within the warranty period, we revisit free of charge.",
   },
   {
-    q: "Which brands and machine types do you repair?",
-    a: "We repair front load, top load and semi-automatic machines of most major brands, including Siemens, Bosch, LG, Samsung, IFB, Whirlpool, Godrej, Haier and Panasonic. We are an independent service and are not an authorized service centre of any brand.",
+    q: "Which brands do you repair?",
+    a: "We specialise only in Siemens and Bosch washing machines: front load, top load and washer-dryers. Focusing on two brands means our technicians know these machines inside out and usually carry the right spares. We are an independent service and are not an authorized service centre of Siemens or Bosch.",
   },
   {
     q: "Do you use original spare parts?",
@@ -177,7 +164,7 @@ export const localities = [
   ...areas.other,
 ].filter((v, i, a) => a.indexOf(v) === i);
 
-export const machineTypes = ["Front load", "Top load", "Semi-automatic", "Not sure"] as const;
+export const machineTypes = ["Front load", "Top load", "Washer-dryer", "Not sure"] as const;
 export const timeSlots = ["Any time", "9 AM – 12 PM", "12 – 3 PM", "3 – 6 PM", "6 – 9 PM"] as const;
 
 export const nav = [

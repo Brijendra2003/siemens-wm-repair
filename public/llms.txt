@@ -1,13 +1,13 @@
 # SpinCare Repairs
 
-> Independent, multi-brand doorstep washing machine repair service in Mumbai, India, focused on Western Line stations (Churchgate to Virar), with coverage across key Central and Harbour Line areas.
+> Independent doorstep washing machine repair service dedicated to Siemens and Bosch machines in Mumbai, India, focused on Western Line stations (Churchgate to Virar), with coverage across key Central and Harbour Line areas.
 
-Important: SpinCare Repairs is an independent repair service. It is NOT affiliated with, authorized by, or endorsed by Siemens, Samsung, Bosch, LG or any other brand, and is not an official service centre, customer care or helpline of any manufacturer. Brand names are used only to describe the machines it repairs.
+Important: SpinCare Repairs is an independent repair service. It is NOT affiliated with, authorized by, or endorsed by Siemens, Bosch or any other brand, and is not an official service centre, customer care or helpline of any manufacturer. Brand names are used only to describe the machines it repairs.
 
 ## Services
 - Front load washing machine repair (drum, bearing, door lock, motor, spin)
 - Top load washing machine repair
-- Semi-automatic washing machine repair
+- Washer-dryer repair
 - Not draining / not spinning
 - Drum noise and bearing replacement
 - PCB and error code diagnosis
@@ -15,7 +15,7 @@ Important: SpinCare Repairs is an independent repair service. It is NOT affiliat
 - Installation and preventive service
 
 ## Brands repaired
-Siemens, Bosch, LG, Samsung, IFB, Whirlpool, Godrej, Haier, Panasonic, Onida, Videocon, Voltas Beko
+Siemens and Bosch only (front load, top load, washer-dryers)
 
 ## How pricing works
 - Any visit/inspection charge is told on the call before booking

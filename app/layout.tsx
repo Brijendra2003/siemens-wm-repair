@@ -24,9 +24,9 @@ const hand = Kalam({
   display: "swap",
 });
 
-const title = "Washing Machine Repair in Mumbai | All Major Brands";
+const title = "Siemens & Bosch Washing Machine Repair in Mumbai";
 const description =
-  "Doorstep washing machine repair in Mumbai for front load, top load & semi-automatic machines. Clear quote before work, warranty on replaced parts.";
+  "Independent doorstep Siemens & Bosch washing machine repair in Mumbai. Front load, top load & washer-dryer specialists. Quote first, warranty on parts.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

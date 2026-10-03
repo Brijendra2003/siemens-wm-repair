@@ -208,7 +208,7 @@ export function EnquiryForm({
           {brands.map((b) => (
             <option key={b}>{b}</option>
           ))}
-          <option>Other</option>
+          <option>Not sure</option>
         </select>
       </div>
 

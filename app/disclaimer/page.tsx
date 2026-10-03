@@ -20,8 +20,7 @@ export default function Page() {
       </p>
       <h2>Trademarks</h2>
       <p>
-        All product and brand names, including Siemens, Bosch, LG, Samsung, IFB, Whirlpool, Godrej, Haier, Panasonic,
-        Onida, Videocon and Voltas Beko, are trademarks of their respective owners. They are used on this website only
+        Siemens and Bosch are trademarks of their respective owners. They are used on this website only
         to identify the machines we are able to repair.
       </p>
       <h2>Spare parts</h2>

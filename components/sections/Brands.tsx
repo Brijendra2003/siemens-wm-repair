@@ -1,13 +1,15 @@
 import { SceneArt } from "@/components/illustrations/SceneArt";
 import { Floaters } from "@/components/illustrations/Decor";
-import { Info } from "lucide-react";
+import { Check, Info } from "lucide-react";
 import { site } from "@/config/site";
 import { brands } from "@/data/content";
 import { Container } from "@/components/ui/Container";
 import { BookButton } from "@/components/enquiry/BookButton";
 import { BrandsScene } from "@/components/illustrations/Scenes";
 
-/** Mirrors the reference's "Professional experience" block: art left, copy + card grid right. */
+const brandPoints = ["Front load & top load", "Error codes & PCB faults", "Drum, bearing & motor"];
+
+/** Mirrors the reference's "Professional experience" block: art left, copy + brand cards right. */
 export function Brands() {
   return (
     <section id="brands" aria-labelledby="brands-title" className="relative overflow-hidden py-20 sm:py-24">
@@ -27,28 +29,41 @@ export function Brands() {
         <div>
           <p className="eyebrow">Brands we repair</p>
           <h2 id="brands-title" className="mt-3 text-3xl leading-[1.1] font-extrabold sm:text-4xl lg:text-[2.75rem]">
-            Siemens &amp; all branded
-            <span className="block text-accent-600">washing machines</span>
+            Only Siemens &amp; Bosch.
+            <span className="block text-accent-600">Nothing else.</span>
           </h2>
-          <p className="mt-4 text-lg font-semibold text-ink-900">Front load · Top load · Semi-automatic</p>
+          <p className="mt-4 text-lg font-semibold text-ink-900">Front load · Top load · Washer-dryer</p>
           <p className="mt-3 max-w-lg leading-relaxed text-ink-500">
-            Whether it&apos;s a Siemens or Bosch front loader, an LG direct-drive or a Samsung top loader,
-            our technicians repair most makes and models found in Mumbai homes.
+            We work on just two brands, so our technicians know these machines inside out: their error codes,
+            common faults and the spares they need. That means faster diagnosis and fewer repeat visits.
           </p>
 
-          <p className="eyebrow mt-8">Machines we work on</p>
-          <ul className="stagger mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <ul className="stagger mt-8 grid gap-4 sm:grid-cols-2">
             {brands.map((b, i) => (
-              <li key={b} style={{ "--i": i } as React.CSSProperties}>
+              <li
+                key={b}
+                style={{ "--i": i } as React.CSSProperties}
+                className="group relative overflow-hidden rounded-3xl bg-white p-6 shadow-soft ring-1 ring-ink-100 transition duration-300 hover:-translate-y-1 hover:shadow-lift hover:ring-accent-200"
+              >
+                <span aria-hidden className="blob absolute -top-10 -right-10 size-32 bg-accent-50 transition-transform duration-500 group-hover:scale-125" />
+                <p className="relative text-[0.7rem] font-bold tracking-[0.18em] text-ink-500 uppercase">Specialists in</p>
+                <h3 className="relative mt-1 font-[family-name:var(--font-display)] text-4xl font-extrabold tracking-tight">{b}</h3>
+                <p className="relative mt-1 text-sm font-semibold text-accent-700">washing machines</p>
+                <ul className="relative mt-4 space-y-1.5 text-sm text-ink-700">
+                  {brandPoints.map((p) => (
+                    <li key={p} className="flex items-center gap-2">
+                      <Check className="size-4 shrink-0 text-success-600" strokeWidth={3} aria-hidden />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
                 <BookButton
-                  source={`brand-${b.toLowerCase().replace(/\s+/g, "-")}`}
+                  source={`brand-${b.toLowerCase()}`}
                   brand={b}
-                  variant="ghost"
                   size="sm"
-                  arrow={false}
-                  className="w-full rounded-2xl! py-4! font-bold hover:-rotate-2 hover:bg-accent-50 hover:text-accent-700"
+                  className="relative mt-5 w-full"
                 >
-                  {b}
+                  Book {b} repair
                 </BookButton>
               </li>
             ))}

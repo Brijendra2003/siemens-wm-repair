@@ -143,7 +143,7 @@ export function BrandsScene() {
         <image href="/illustrations/technician-checklist.webp" x="70" y="58" width="160" height="410" preserveAspectRatio="xMidYMax meet" />
       </g>
       <Toolbox transform="translate(200 378) scale(0.86)" label={site.shortName} />
-      <HandNote x={300} y={44} lines={["Every brand", "Every model"]} rotate={-6} size={24} />
+      <HandNote x={300} y={44} lines={["Siemens · Bosch", "Every model"]} rotate={-6} size={24} />
       <Sparkle x={520} y={300} s={0.8} delay={0.5} />
       <Sparkle x={40} y={400} s={0.6} delay={1.2} color="#60a5fa" />
     </svg>

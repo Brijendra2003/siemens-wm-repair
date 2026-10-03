@@ -7,7 +7,7 @@ import { CallLink, WhatsAppLink } from "@/components/enquiry/ContactLinks";
 import { HeroScene } from "@/components/illustrations/Scenes";
 import { Floaters, type Floater } from "@/components/illustrations/Decor";
 
-const featuredBrands = ["Siemens", "Bosch", "LG", "Samsung", "IFB"];
+const featuredBrands = ["Siemens", "Bosch"];
 
 const decor: Floater[] = [
   { kind: "wrench", top: "58%", left: "48%", size: 44, rot: -20, desktopOnly: true },
@@ -37,7 +37,7 @@ export function Hero() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent-500 opacity-60 motion-reduce:hidden" />
               <span className="relative inline-flex size-2 rounded-full bg-accent-600" />
             </span>
-            Mumbai · Doorstep repair · All brands
+            Mumbai · Siemens &amp; Bosch specialists
           </p>
           <h1 id="hero-title" className="mt-5 text-[2.6rem] leading-[0.98] font-extrabold tracking-[-0.04em] sm:text-6xl lg:text-[3.9rem] xl:text-[4.3rem]">
             <span className="anim-intro block" style={d(100)}>
@@ -60,10 +60,10 @@ export function Hero() {
             </span>
           </h1>
           <p className="anim-intro mt-7 text-xl leading-snug font-semibold text-ink-900 sm:text-2xl" style={d(340)}>
-            For Siemens, Bosch, LG, Samsung, IFB &amp; all branded machines
+            Dedicated to Siemens &amp; Bosch washing machines
           </p>
           <p className="anim-intro mt-4 text-base leading-relaxed text-ink-500 sm:text-lg" style={d(440)}>
-            Front load, top load and semi-automatic repairs at your doorstep. A trained technician
+            Front load, top load and washer-dryer repairs at your doorstep. A Siemens &amp; Bosch trained technician
             finds the fault, shares a clear quote, and fixes it with warranty on replaced parts.
           </p>
 
@@ -88,15 +88,12 @@ export function Hero() {
             {featuredBrands.map((b, i) => (
               <li
                 key={b}
-                className="anim-pop rounded-full bg-white px-3 py-1 text-xs font-semibold text-ink-700 shadow-soft ring-1 ring-ink-100 transition hover:-translate-y-0.5 hover:ring-accent-500"
+                className="anim-pop rounded-full bg-white px-4 py-1.5 text-sm font-bold text-ink-900 shadow-soft ring-1 ring-ink-100 transition hover:-translate-y-0.5 hover:ring-accent-500"
                 style={d(760 + i * 70)}
               >
                 {b}
               </li>
             ))}
-            <li className="anim-pop text-xs font-semibold text-ink-500" style={d(1150)}>
-              + more
-            </li>
           </ul>
 
           <p className="mt-6 flex gap-2 text-xs leading-relaxed text-ink-500">
